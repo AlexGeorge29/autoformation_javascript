@@ -45,11 +45,10 @@ maisons.forEach((maison) => {
 })
 
 const tableau = document.getElementById("persos");
-
-document.getElementById("maison").addEventListener("change", function (event) {
+document.getElementById("maison").addEventListener("change", function (event) { //event sur le changement dans liste déroulante
     var persosElt = document.getElementById("persos");
     persosElt.innerHTML = ""; // Vidage de la liste
-    const code = event.target.value;
+    const code = event.target.value; // récupérer le code
     getPersonnages(code).forEach((perso) => {
       const membreFamille = document.createElement("li");
       membreFamille.textContent = perso;
