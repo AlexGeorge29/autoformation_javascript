@@ -8,7 +8,7 @@ function move() {
   function frame() {
     if (width >= 100) {
       clearInterval(id);
-      setTimeout(document.getElementById("myProgress").classList.add("hidden"), delayInMilliseconds);
+      document.getElementById("myProgress").style.visibility = "hidden";
     } else {
       width++;
       elem.style.width = width + '%';
